@@ -1,3 +1,4 @@
+function (window) {
 
 function Draggable (el) {
   const _this = this
@@ -37,3 +38,6 @@ EventEmitter.prototype.emit = function (eventName, data) {
   this._listeners[eventName].forEach(cb => cb(data))
 }
 
+window.Draggable = Draggable
+
+})(window)
